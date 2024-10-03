@@ -10,12 +10,31 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+            TabView {
+                // guideline - 3 to 6 tabs in ideal
+                AppleScreen()
+                    .tabItem{
+                        Image(systemName: "leaf.fill")
+                            .foregroundStyle(.orange)
+                        Text("Orange")
+                    }
+                OrangeScreen()
+                    .tabItem{
+                        Image(systemName: "applelogo")
+                            .foregroundStyle(.green)
+                        Text("Apple")
+
+                    }
+                BananaScreen()
+                    .tabItem{
+                        Image(systemName: "ladybug.fill")
+                            .foregroundStyle(.red)
+                        Text("Apple")
+
+                    }
+            }
         }
-        .padding()
     }
 }
 
